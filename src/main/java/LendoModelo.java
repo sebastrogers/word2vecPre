@@ -34,7 +34,7 @@ public class LendoModelo {
 			//System.out.println("ok");
 			//System.out.println(word);
 			cosSim = vec.similarity("negro", word);
-			System.out.println("Palavra + sentimentos negativos");
+			System.out.println("Palavra + sentimento negativo");
 			System.out.println("negro + " + word + ": " + cosSim);
 			System.out.println("-----------------------------------------");
 			
@@ -44,7 +44,7 @@ public class LendoModelo {
 		for (String word : sp) {
 			//System.out.println("ok");
 			//System.out.println(word);
-			System.out.println("Palavra + sentimentos positivos");
+			System.out.println("Palavra + sentimento positivo");
 			cosSim = vec.similarity("negro", word);
 			System.out.println("negro + " + word + ": " + cosSim);
 			System.out.println("-----------------------------------------");	
