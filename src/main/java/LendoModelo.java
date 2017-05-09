@@ -24,37 +24,25 @@ public class LendoModelo {
 		
 		ArrayList<String>  p = Somatorio.ler("ListaP.txt");
 		ArrayList<String>  sp = Somatorio.ler("ListaSP.txt");
-
-		//System.out.println(p.size());
-		//System.out.println(vec.getWordVector("decepcionado"));
-		//System.out.println(vec.getWordVector("negro"));
 		
 		double cosSim = 0;
 		for (String word : p) {
-			//System.out.println("ok");
-			//System.out.println(word);
+
 			cosSim = vec.similarity("negro", word);
 			System.out.println("Palavra + sentimento negativo");
 			System.out.println("negro + " + word + ": " + cosSim);
 			System.out.println("-----------------------------------------");
 			
 		}
-	
 		
 		for (String word : sp) {
-			//System.out.println("ok");
-			//System.out.println(word);
+			
 			System.out.println("Palavra + sentimento positivo");
 			cosSim = vec.similarity("negro", word);
 			System.out.println("negro + " + word + ": " + cosSim);
 			System.out.println("-----------------------------------------");	
 			
 		}
-		
-		/**
-        double cosSim = vec.similarity("similaridade entre termos: " +"negro", "racismo");
-        System.out.println(cosSim);
-		   **/     
 
 	}
 
