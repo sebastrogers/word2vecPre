@@ -19,7 +19,7 @@ public class TreinandoModelo {
 
 	public static void main(String[] args) throws IOException {		
 		
-		SentenceIterator iter = new LineSentenceIterator(new File("PreconceitoConvertido.txt"));
+		SentenceIterator iter = new LineSentenceIterator(new File("PreconceitoConvertido2.txt"));
 		iter.setPreProcessor(new SentencePreProcessor() {
 			public String preProcess(String sentence) {
 				return sentence.toLowerCase();
