@@ -19,7 +19,7 @@ public class TreinandoModelo {
 
 	public static void main(String[] args) throws IOException {		
 		
-		SentenceIterator iter = new LineSentenceIterator(new File("PreconceitoConvertido2.txt"));
+		SentenceIterator iter = new LineSentenceIterator(new File("PreconceitoStopwords.txt"));
 		iter.setPreProcessor(new SentencePreProcessor() {
 			public String preProcess(String sentence) {
 				return sentence.toLowerCase();
@@ -44,8 +44,8 @@ public class TreinandoModelo {
 
 		//SALVANDO MODELO TREINADO
 
-		WordVectorSerializer.writeFullModel(vec, "pathToSaveModelPreconceitoNOVO3.txt");
-		WordVectorSerializer.writeWordVectors(vec, "pathToSaveModelPreconceitoVector.txt");
+		WordVectorSerializer.writeFullModel(vec, "pathToSaveModelPreconceitoNOVO5.txt");
+		WordVectorSerializer.writeWordVectors(vec, "pathToSaveModelPreconceitoVector1.txt");
 	}
 
 

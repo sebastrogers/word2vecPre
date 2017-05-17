@@ -16,10 +16,10 @@ public class LendoModelo {
 	public static void main(String[] args) throws IOException {
 
 		//LENDO MODELO TREINADO
-		Word2Vec vec = WordVectorSerializer.loadFullModel("pathToSaveModelPreconceitoNOVO3.txt");
+		Word2Vec vec = WordVectorSerializer.loadFullModel("pathToSaveModelPreconceitoNOVO5.txt");
 		//Word2Vec vec = WordVectorSerializer.readWord2Vec(new File("pathToSaveModelPreconceito.txt"));
 
-		Collection<String> lst = vec.wordsNearest("racismo", 10);
+		Collection<String> lst = vec.wordsNearest("negro", 10);
 		System.out.println(lst);       
 		
 		ArrayList<String>  p = Somatorio.ler("ListaP.txt");
@@ -28,10 +28,10 @@ public class LendoModelo {
 		double cosSim = 0;
 		for (String word : p) {
 
-			cosSim = vec.similarity("racismo", word);
+			cosSim = vec.similarity("negro", word);
 			
 			System.out.println("Palavra + sentimento negativo");
-			System.out.println("racismo + " + word + ": " + cosSim);
+			System.out.println("negro + " + word + ": " + cosSim);
 			System.out.println("-----------------------------------------");
 			
 		}
@@ -39,8 +39,8 @@ public class LendoModelo {
 		for (String word : sp) {
 			
 			System.out.println("Palavra + sentimento positivo");
-			cosSim = vec.similarity("racismo", word);
-			System.out.println("racismo + " + word + ": " + cosSim);
+			cosSim = vec.similarity("negro", word);
+			System.out.println("negro + " + word + ": " + cosSim);
 			System.out.println("-----------------------------------------");	
 			
 		}
